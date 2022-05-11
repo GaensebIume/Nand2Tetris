@@ -23,33 +23,24 @@ public class Parser {
     public void advance(){
         do {
             line = scanner.nextLine();
-            if(line.isEmpty())advance();//TODO: FIND BETTER IMPLEMENTATION
+            if(line.isEmpty())advance();
         } while (line.charAt(0) == '/' && hasMoreCommands());
         line = line.split("//")[0];
     }
 
     public COMMANDTYPE commandType(){
         args = line.split(" ");
-        switch (args[0]) {
-            case "push":
-                return COMMANDTYPE.C_PUSH;
-            case "pop":
-                return COMMANDTYPE.C_POP;
-            case "function":
-                return COMMANDTYPE.C_FUNCTION;
-            case "call":
-                return COMMANDTYPE.C_CALL;
-            case "return":
-                return COMMANDTYPE.C_RETURN;
-            case "if":
-                return COMMANDTYPE.C_IF;
-            case "goto":
-                return COMMANDTYPE.C_GOTO;
-            case "label":
-                return COMMANDTYPE.C_LABEL;
-            default:
-                return COMMANDTYPE.C_ARITHMETIC;
-        }
+        return switch (args[0]) {
+            case "push" -> COMMANDTYPE.C_PUSH;
+            case "pop" -> COMMANDTYPE.C_POP;
+            case "function" -> COMMANDTYPE.C_FUNCTION;
+            case "call" -> COMMANDTYPE.C_CALL;
+            case "return" -> COMMANDTYPE.C_RETURN;
+            case "if" -> COMMANDTYPE.C_IF;
+            case "goto" -> COMMANDTYPE.C_GOTO;
+            case "label" -> COMMANDTYPE.C_LABEL;
+            default -> COMMANDTYPE.C_ARITHMETIC;
+        };
     }
 
     public String[] getArgs(){
