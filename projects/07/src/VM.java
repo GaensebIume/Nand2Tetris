@@ -3,8 +3,7 @@ import java.io.File;
 public class VM {
     private static int filesTranslated = 0;
     public static void main(String[] args){
-        String[] files = new String[]{"StackArithmetic/", "MemoryAccess/"};//DEBUG INPUT for manual file/folder insertion empty to use args input for translation
-        runScript(files);
+        runScript(args);
         System.out.println("Translated " + filesTranslated + " files in total");
     }
 
