@@ -1,0 +1,10 @@
+ProgramFlow
+    BasicLoop [OK]
+    FibonacciSeries [OK]
+FunctionCalls
+    FibonacciElement [OK]
+    NestedCall [OK]
+    SimpleFunction [OK]
+    StaticTest [OK]
+
+ALL TEST PASSED
