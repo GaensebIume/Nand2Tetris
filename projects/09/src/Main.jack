@@ -1,0 +1,64 @@
+//IDEA: Rock, Paper, Scissors
+class Main{
+    function void main(){
+        var int inputPlayer1;
+        var int inputPlayer2;
+
+        do Output.printString("Rock: 1, Paper: 2, Scissors: 3");
+        do Output.println();
+        let inputPlayer1 = Keyboard.readInt("Player1:");
+        do Screen.clearScreen();
+        do Output.printString("Rock: 1, Paper: 2, Scissors: 3");
+        let inputPlayer2 = Keyboard.readInt("Player2:");
+        do Screen.clearScreen();
+
+        //checks for out of bounds numbers
+        if(inputPlayer1<1|inputPlayer1>3){
+            do Output.printString("not an option");
+            do System.error("420");
+        }
+        if(inputPlayer2<1){
+                    do Output.printString("not an option");
+                    do System.error("420");
+        }
+
+        //check for a tie
+        if(inputPlayer1 = inputPlayer2){
+            do Output.printString("TIE");
+            return;
+        }
+
+        //checks for the different possibilities
+        if(inputPlayer1 = 1){
+            if(inputPlayer2 = 2){
+                do Output.printString("Player2 Wins!");
+                return;
+            }
+            if(inputPlayer2 = 3){
+                do Output.printString("Player1 Wins!");
+                return;
+            }
+        }
+        if(inputPlayer1 = 2){
+            if(inputPlayer2 = 1){
+                do Output.printString("Player1 Wins!");
+                return;
+            }
+            if(inputPlayer2 = 3){
+                do Output.printString("Player2 Wins!");
+                return;
+            }
+        }
+        if(inputPlayer1 = 3){
+            if(inputPlayer2 = 1){
+                do Output.printString("Player2 Wins!");
+                return;
+            }
+            if(inputPlayer2 = 2){
+                do Output.printString("Player1 Wins!");
+                return;
+            }
+        }
+        return;
+    }
+}

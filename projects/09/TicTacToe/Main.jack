@@ -1,0 +1,25 @@
+//TicTacToe
+class Main{
+    function void main(){
+        var char y0;
+        var char y1;
+        var char y2;
+        var boolean gameFinished;
+
+        let y0 = Array.new(2);
+        let y1 = Array.new(2);
+        let y2 = Array.new(2);
+        let gameFinished = false;
+
+        while(~gameFinished){
+            do Output.printString("jfh");
+            do Output.printString(y0[0] + y0[1]  + y0[2]);
+            //do Output.printString(x[0][1] + "|" + x[1][1] + "|" + x[2][1]);
+            //do Output.printString(x[0][2] + "|" + x[1][2] + "|" + x[2][2]);
+            let gameFinished = true;
+        }
+
+
+        return;
+    }
+}

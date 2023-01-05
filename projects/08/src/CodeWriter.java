@@ -103,9 +103,7 @@ public class CodeWriter {
                 throw new IllegalArgumentException("cannot pop a constant");
             }
             if(dictionary.containsKey(segment)) {
-                /*if(index > 1) */       writeToFile("\n@" + dictionary.get(segment) + "\nD=M\n@" + index + "\nD=D+A\n@R13\nM=D\n@SP\nAM=M-1\nD=M\n@R13\nA=M\nM=D");//writes to field specified by content of segment + index; R13 == one of the fields to store data within one command (here: which field to pop to), can also be R14..R16
-                //else if (index == 1) writeToFile("\n@SP\nAM=M-1\nD=M\n@" + dictionary.get(segment) + "\nA=A+1\nM=D");//index ==1 hence A=M+1
-                //else writeToFile("\n@SP\nAM=M-1\nD=M\n@" + dictionary.get(segment) + "\nM=D");//index <=0, hence no addition to A-Register
+                writeToFile("\n@" + dictionary.get(segment) + "\nD=M\n@" + index + "\nD=D+A\n@R13\nM=D\n@SP\nAM=M-1\nD=M\n@R13\nA=M\nM=D");
             }
             else writeToFile("\nnot a pop command " + segment);
         }
