@@ -7,15 +7,15 @@ public enum KEYWORD {
     BOOLEAN,
     CHAR,
     VOID,
-    VAR,
+    varDec,
     STATIC,
     FIELD,
-    LET,//TODO: REMOVE DO AND LET
-    DO,
-    IF,
+    letStatement,
+    doStatement,
+    ifStatement,
     ELSE,
     WHILE,
-    RETURN,
+    returnStatement,
     TRUE,
     FALSE,
     NULL,
@@ -25,11 +25,8 @@ public enum KEYWORD {
     classVarDec,
     subroutineDec,
     subroutineBody,
-    varDec,
     statements,
-    letStatement,
     expression,
     term,
-    doStatement,
-    returnStatement
+    integerConstant
 }
