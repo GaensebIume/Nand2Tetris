@@ -5,7 +5,7 @@
 
 // (derived from projects/09/Square/Main.jack, with testing additions)
 
-/** Initializes a new Square Dance game and starts running it. */
+// Initializes a new Square Dance game and starts running it.
 class Main {
     static boolean test;    // Added for testing -- there is no static keyword
                             // in the Square files.
@@ -22,14 +22,14 @@ class Main {
         var String s;
         var Array a;
         if (false) {
-            let s = "string constant";
+            //let s = "string constant";
             let s = null;
-            let a[1] = a[2];
+            //let a[1] = a[2];
         }
         else {              // There is no else keyword in the Square files.
-            let i = i * (-j);
-            let j = j / (-2);   // note: unary negate constant 2
-            let i = i | j;
+            //let i = i * (-j);
+            //let j = j / (-2);   // note: unary negate constant 2
+            //let i = i | j;
         }
         return;
     }

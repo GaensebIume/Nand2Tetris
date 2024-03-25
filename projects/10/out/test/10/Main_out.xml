@@ -117,7 +117,7 @@
             <letStatement>
               <KEYWORD> let </KEYWORD>
               <IDENTIFIER> s </IDENTIFIER>
-              <IDENTIFIER> s </IDENTIFIER>
+              <IDENTIFIER> s </IDENTIFIER> REMOVE
               <SYMBOL> = </SYMBOL>
               <expression>
                 <term>
@@ -129,19 +129,20 @@
             <letStatement>
               <KEYWORD> let </KEYWORD>
               <IDENTIFIER> s </IDENTIFIER>
-              <IDENTIFIER> s </IDENTIFIER>
+              <IDENTIFIER> s </IDENTIFIER> REMOVE
               <SYMBOL> = </SYMBOL>
               <expression>
                 <term>
                   <KEYWORD> null </KEYWORD>
-                  <SYMBOL> ; </SYMBOL>
-                </letStatement>
-                <letStatement>
-                  <KEYWORD> let </KEYWORD>
-                  <IDENTIFIER> a </IDENTIFIER>
-                  <IDENTIFIER> a </IDENTIFIER>
-                  <SYMBOL> [ </SYMBOL>
-                  <SYMBOL> ] </SYMBOL>
+                </term>             EDITED
+              <SYMBOL> ; </SYMBOL>
+              </letStatement>
+              <letStatement>
+                <KEYWORD> let </KEYWORD>
+                <IDENTIFIER> a </IDENTIFIER>
+                <IDENTIFIER> a </IDENTIFIER> REMOVE
+                <SYMBOL> [ </SYMBOL> INSERT 
+                <SYMBOL> ] </SYMBOL>
                   <SYMBOL> = </SYMBOL>
                   <expression>
                     <term>
